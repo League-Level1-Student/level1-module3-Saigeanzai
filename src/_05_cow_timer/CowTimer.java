@@ -37,7 +37,14 @@ public class CowTimer {
     }
 
     public void start() throws InterruptedException {
+    	for(int i=10; i>0; i--) {
+    		setTime(i);
+    		Thread.sleep(100);
     	
+    	if(i==1) {
+    		playSound("moo.wav");
+    	}
+    	}
     }
 
     public void playSound(final String file) {
